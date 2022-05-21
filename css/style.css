@@ -1,0 +1,871 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    --mainColo : blue;
+    --subColor : white;
+    --subColor2 : black; 
+}
+
+header{
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    padding: 5px 0;
+    border-bottom: 4px solid var(--mainColo);
+}
+header .head-i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    font-size: 30px;
+    color: var(--subColor);
+    background-color: transparent;
+    opacity: 0;
+    transition: 1s;
+}
+header a{
+    text-decoration: none;
+    
+}
+header .logo{
+    font-size: 45px;
+    color: var(--subColor);
+}
+.logo span{
+    color: var(--mainColo);
+}
+header ul{
+    display: flex;
+    list-style: none;
+    position: relative;
+}
+header ul li{
+    margin-left: 20px;
+}
+
+ul a{
+    color: var(--subColor);
+}
+ul a:hover{
+    color: var(--mainColo);
+}
+
+.topup{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: var(--subColor);
+    font-size: 20px;
+    border: 1px solid var(--subColor);
+    padding: 10px;
+    border-radius: 50%;
+    background-color: var(--subColor2);
+    display: none;
+
+}
+#s1{
+    height: 100vh;
+}
+#s1 .s1-div1{
+    clip-path: polygon(0 0, 85% 0, 35% 100%, 0% 100%);
+    background-color: var(--subColor2);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+}
+#s1 .s1-div1 .s1-div2{
+    color: var(--subColor);
+    padding-left: 10%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+video{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: -5;
+    object-fit: cover;
+    
+}
+.s1-div2 .s1-div2-p1{
+    word-spacing: 0.5em;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.s1-div2 .s1-div2-p2{
+    font-size: 70px;
+    margin-bottom: 10px;
+}
+.s1-div2 .s1-div2-p2 span{
+    color: var(--mainColo);
+}
+.s1-div2 .s1-div2-p3{
+    word-spacing: 0.5em;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+.s1-div2 input{
+    width: 300px;
+    height: 40px;
+    border-radius: 15px;
+    border: 2px solid var(--mainColo);
+    padding: 0px 10px;
+    margin-bottom: 10px;
+}
+.s1-div2 button{
+    width: 115px;
+    height: 35px;
+    color: var(--subColor);
+    background-color: var(--mainColo);
+    border-radius: 15px;
+    border: 1px solid var(--subColor);
+    animation-name: changcolor;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes changcolor {
+    from{
+        background-color: var(--mainColo);
+        color: var(--subColor);
+    }
+    to{
+        background-color: white;
+        color: var(--mainColo);
+    }
+    
+}
+.s1-div2 button:hover{
+    animation-play-state: paused; 
+}
+#s2{
+    background-color: var(--subColor2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 80px 0;
+    border-top: 2px solid var(--subColor);
+
+}
+#s2 .s2-div1{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--subColor);
+    overflow: hidden;
+
+}
+.s2-div1 .s2-div2{
+    width: 50%;
+    padding-right: 50px;
+    height: 100%;
+    position: relative;
+    transition: 1s;
+}
+.s2-div1 .s2-div2 .color{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+.s2-div1 .s2-div2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.s2-div1 .s2-div3{
+    width: 50%;
+    height: 100%;
+    padding-top: 50px;
+    transition: 1s;
+}
+.class1{
+    transform: translateX(100%);
+}
+
+.s2-div3 .div3-p1{
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+.s2-div3 .div3-p1 span{
+    color: var(--mainColo);
+
+}
+.s2-div3 .div3-p2{
+    font-size: 25px;
+    margin-bottom: 20px;
+
+}
+.s2-div3 .div3-p2 span{
+    color: var(--mainColo);
+}
+.s2-div3 .div3-p3{
+    margin-bottom: 20px;
+    word-spacing: 0.3em;
+
+}
+.s2-div3 button{
+    padding: 10px 20px;
+    color: var(--subColor);
+    background-color: var(--mainColo);
+    border-radius: 15px;
+    border: 1px solid var(--mainColo);
+    animation-name: changcolor;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.s2-div3 button:hover{
+    animation-play-state: paused; 
+
+}
+#s3{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0;
+    background-color: var(--subColor2);
+    border-top: 2px solid var(--subColor);
+
+}
+#s3 .s3-div1{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+}
+.s3-div1 .div1-p1{
+    width: 20%;
+    color: var(--subColor);
+    font-size: 38px;
+}
+.s3-div1 .div1-p1 span{
+    color: var(--mainColo);
+
+}
+.s3-div1 .s3-div2{
+    width: 80%;
+    
+}
+.s3-div2 .content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+.content .cont-p{
+    width: 15%;
+    color: var(--subColor);
+    font-size: 18px;
+}
+.content .super-div{
+    width: 85%;
+    height: 15px;
+    background-color: var(--subColor);
+    border-radius: 10px ;
+}
+.content span{
+    display: inline-block;
+    height: 100%;
+    background-color: var(--mainColo);
+    border-radius: 10px ;
+    transition: 2s;
+    transition-delay: 0.7s;
+    width: 0;
+    color: white;
+    text-align: center;
+
+}
+#s4{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0;
+    background-color: var(--subColor2);
+    border-top: 2px solid var(--subColor);
+
+}
+#s4 .s4-div1{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.s4-div1 .div1-text{
+    width: 100%;
+    margin-bottom: 60px;
+    text-align: center;
+}
+.div1-text .text-p1{
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: var(--subColor);
+}
+.div1-text .text-p2{
+    font-size: 20px;
+    color: var(--subColor);
+}
+.s4-div1 .div1-skills{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    column-gap: 10px;
+}
+.div1-skills .skills-content{
+    grid-column: span 4;
+    text-align: center;
+    background-color: var(--mainColo);
+    padding: 50px 10px;
+    border: 4px solid var(--subColor);
+    transition: 3s;
+}
+.skills-content i{
+    font-size: 50px;
+    margin-bottom: 15px;
+    color: var(--subColor);
+}
+.skills-content .skills-p1{
+    font-size: 30px;
+    color: va;
+    margin-bottom: 15px;
+    color: var(--subColor);
+    
+
+}
+.skills-content .skills-p2{
+    font-size: 20px;
+    margin-bottom: 25px;
+    color: var(--subColor);
+    
+}
+.skills-content button{
+    padding: 5px 10px ;
+    border-radius: 15px ;
+    border: 1px solid var(--subColor2);
+    animation-name: changcolor;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.text-p1 span{
+    color: var(--mainColo);
+}
+
+#s5 {
+    width: 100%;
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--subColor2);
+    border-top: 2px solid var(--subColor);
+}
+#s5 .s5-mainText{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 40px;
+}
+.s5-mainText .s5-div1{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 80px;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.s5-mainText .s5-div2{
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--subColor2);
+    border: 4px solid var(--mainColo);
+    padding: 30px 0;
+}
+.s5-div1 .s5-div1-p1{
+    font-size: 45px;
+    margin-bottom: 30px;
+    color: var(--subColor);
+}
+.s5-div1 .s5-div1-p1 span{
+    color: var(--mainColo);
+}
+.s5-div1 input{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px 10px;
+    border-radius: 15px;
+    border: 2px solid var(--mainColo);
+    color: var(--mainColo);
+    background-color: transparent;
+    color: var(--subColor);
+}
+
+.s5-div1 textarea{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px 10px;
+    border-radius: 15px;
+    border: 2px solid var(--mainColo);
+    color: var(--mainColo);
+    background-color: transparent;
+
+}
+.s5-div1 button{
+    padding: 10px 20px;
+    color: var(--subColor);
+    background-color: var(--mainColo);
+    border-radius: 15px;
+    border: 1px solid var(--mainColo);
+    animation-name: changcolor;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.s5-div1 button:hover{
+    animation-play-state: paused; 
+}
+.div2-info{
+    text-align: center;
+}
+.div2-info i{
+    font-size: 60px;
+    color: var(--mainColo);
+    margin-bottom: 10px;
+}
+.div2-info .info-p1{
+    font-size: 30px;
+    color: var(--subColor);
+}
+.div2-info .info-p2{
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: var(--subColor);
+
+}
+.s5-cover1{
+    width: 100%;
+    float: right;
+    padding-left: 80px ;
+}
+.s5-cover1 a{
+    color: var(--subColor);
+
+}
+.s5-cover1 i{
+    margin-right: 15px;
+    font-size: 30px;
+}
+.s5-cover1 i:hover{
+   color: var(--mainColo);
+}
+#s6{
+    width: 100%;
+    padding: 100px 0;
+    background-color: var(--subColor2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-top: 2px solid var(--subColor);
+
+}
+#s6 p{
+    font-size: 45px;
+    color: var(--subColor);
+    margin-bottom: 50px;
+}
+#s6 p span{
+    color: var(--mainColo);
+}
+.s6-maindiv{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.s6-div1{
+    width: 100%;
+    height: 500px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.s6-div1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.s6-div1 button{
+    position: absolute;
+    padding: 5px 10px ;
+    bottom: 100px;
+    left: 50px;
+    transition: 1s;
+    border-radius: 15px ;
+    border: 1px solid var(--mainColo);
+    color: var(--mainColo);
+    background-color: white;
+    opacity: 0 ;
+    transition-delay: 1s;
+}
+.s6-div1 button:hover{
+    border: 1px solid var(--mainColo);
+    color: var(--subColor);
+    background-color: var(--mainColo);
+}
+
+.s6-div2{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.s6-div2 img{
+    width: 25%;
+    height: 100%;
+    object-fit: cover;
+    height: 150px;
+
+    
+}
+.s6-div2 img:hover{
+    transform: scale(0.95);
+}
+footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--subColor2);
+    border-top: 2px solid var(--subColor);
+    padding: 10px 0;
+}
+footer a{
+    text-decoration: none;
+    color: var(--subColor);
+    
+}
+footer .logo{
+    font-size: 45px;
+}
+.logo span{
+    color: var(--mainColo);
+}
+footer .textFoot{
+    font-size: 20px;
+    color: var(--subColor);
+
+}
+.textFoot span{
+    color: var(--mainColo);
+    
+}
+.changeColor{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: var(--subColor2);
+    border: 1px solid var(--mainColo);
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translate(100%,-50%);
+    padding: 5px 0;
+    transition: 1s;
+    z-index: 5;
+}
+.sett-div1{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+.show{
+    transform: translate(0,-50%);
+
+}
+.changeColor span{
+    width: 30px ;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--subColor);
+    margin: 0 5px;
+}
+.setting{
+    height: 100%;
+    position: absolute;
+    right: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5px;
+    background-color: var(--subColor);
+    border: 1px solid var(--mainColo);
+}
+.setting i{
+    font-size: 20px;
+    color: var(--subColor2);
+}
+.sett-div2{
+    color: var(--subColor);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px 5px;
+}
+.sett-div2 div {
+    width: 30px ;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--subColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.sett-div2 div i{
+    color: var(--subColor2);
+}
+
+header ul button{
+    display: none;
+}
+
+
+
+
+
+.show1{
+    transform: translateX(0)
+
+}
+
+.headColor{
+    background-color: var(--subColor2);
+}
+
+@media (max-width : 805px){
+    /* header & s1 */
+    header .head-i{
+        opacity: 1;
+    }
+    header ul{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+        top: 100%;
+        right: 0;
+        text-align: center;
+        background-color: var(--subColor2);
+        border: 1px solid var(--mainColo);
+        transform: translateX(100%);
+        transition: 1s;
+    }
+    header ul li{
+        width: 200px;
+        padding: 15px 0;
+    }
+    header ul li a{
+        color: var(--subColor);
+
+    }
+    header ul button{
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: transparent;
+        border: transparent;
+
+    }
+    header ul button i{
+        font-size: 20px;
+        color: var(--subColor);
+    }
+    header ul button i:hover{
+        color: var(--mainColo);
+    }
+    #s1 .s1-div1{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+    }
+    .head-i:hover{
+        color: var(--mainColo);
+
+    }
+
+    /* s2 */
+    #s2 .s2-div1{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: var(--subColor);
+        overflow: hidden;
+    
+    }
+    .s2-div1 .s2-div2{
+        width: 100%;
+        padding: 0 15px;
+    }
+    .s2-div1 .s2-div2 .color{
+        width: 100%;
+        height: 50%;
+    }
+    .s2-div1 .s2-div3{
+        width: 100%;
+        padding: 0 15px;
+    }
+    .s2-div3 .div3-p1{
+        font-size: 40px;
+    }
+    .s2-div3 .div3-p2{
+        font-size: 18px;
+    }
+    .s2-div3 .div3-p3{
+        font-size: 16px;
+    }
+
+    /* s3 */
+    #s3 .s3-div1{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .s3-div1 .div1-p1{
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 0 15px;
+
+    }
+    .s3-div1 .s3-div2{
+        width: 100%;
+        padding: 0 15px;
+    }
+    .s3-div2 .content{
+        width: 100%;
+    }
+    .content .cont-p{
+        width: 20%;
+    }
+    .content .super-div{
+        width: 80%;
+    }
+    /* s4 */
+    .s4-div1 .div1-skills{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+    .div1-skills .skills-content{
+        margin-bottom: 10px;
+    }
+    /* s6 */
+    .s6-div2 img{
+        width: 50%;
+        height: 100%;
+        object-fit: cover;
+        
+    }
+    .s6-div1{
+        height: 370px;
+    }
+
+    /* s5 */
+    #s5 .s5-mainText{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 30px;
+    }
+    .s5-mainText .s5-div1{
+        width: 100%;
+        padding: 0;
+        margin-bottom: 10px;
+    }
+    .s5-mainText .s5-div2{
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+    }
+
+    .div2-info{
+        text-align: center;
+        color: var(--subColor2);
+        width: 50%;
+    }
+    .div2-info i{
+        font-size: 40px;
+        color: var(--mainColo);
+        margin-bottom: 10px;
+    }
+    .div2-info .info-p1{
+        font-size: 20px;
+    }
+    .div2-info .info-p2{
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+
+    .s5-cover1{
+        width: 100%;
+        float: right;
+        padding-left: 80px ;
+        margin-top: 20px;
+    }
+    footer .logo{
+        font-size: 25px;
+    }
+    footer .textFoot{
+        font-size: 14px;
+        color: var(--subColor);
+    
+    }
+}
+@media (min-width : 806px) and (max-width : 991px){
+    
+}
